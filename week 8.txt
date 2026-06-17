@@ -1,0 +1,47 @@
+class Node: def init(self, data): self.data = data self.next = None
+
+class LinkedList: def init(self): self.head = None
+
+def add_front(self, data):
+    new = Node(data)
+    new.next = self.head
+    self.head = new
+
+
+def add_end(self, data):
+    new = Node(data)
+
+    if self.head is None:
+        self.head = new
+    else:
+        temp = self.head
+        while temp.next is not None:
+            temp = temp.next
+        temp.next = new
+
+
+def add_between(self, prev_data, data):
+    temp = self.head
+
+    while temp is not None:
+        if temp.data == prev_data:
+            new = Node(data)
+            new.next = temp.next
+            temp.next = new
+            return
+        temp = temp.next
+
+    print("Value not found")
+
+
+def display(self):
+    temp = self.head
+    while temp:
+        print(temp.data, end=" -> ")
+        temp = temp.next
+    print("None")
+ll = LinkedList()
+
+ll.add_front(3) ll.add_front(1) ll.add_end(5) ll.add_between(3, 4)
+
+ll.display()
